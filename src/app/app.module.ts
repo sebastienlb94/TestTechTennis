@@ -7,6 +7,7 @@ import { PlayerDetailsComponent } from './player-details/player-details.componen
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PlayerFilterPipe } from './player-list/player-filter.pipe';
+import { PlayerCardComponent } from './player-card/player-card.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
     PlayerListComponent,
     PlayerDetailsComponent,
     PlayerFilterPipe,
+    PlayerCardComponent,
   ],
   imports: [
     BrowserModule,

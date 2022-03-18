@@ -2,7 +2,7 @@
     <input class="searchBox" type="text" id="search" name="search" placeholder="Rechercher un joueur" [(ngModel)]="filteredString" autocomplete="off">
     <div class="list">
         <div *ngFor = "let player of players | playerFilter:filteredString ">
-            <div class="player">{{ player.firstname }}</div>
+            <app-player-card [player]="player"></app-player-card>
         </div>
     </div>
 </div>

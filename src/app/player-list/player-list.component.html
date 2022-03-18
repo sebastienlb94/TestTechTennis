@@ -1,1 +1,8 @@
-<p>player-list works!</p>
+<div class="container">
+    <input class="searchBox" type="text" id="search" name="search" placeholder="Rechercher un joueur" [(ngModel)]="filteredString">
+    <div class="list">
+        <div *ngFor = "let player of players">
+            <div class="player">{{ player.firstname }}</div>
+        </div>
+    </div>
+</div>

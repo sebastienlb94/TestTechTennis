@@ -1,0 +1,22 @@
+<a class="card" [routerLink]="['/player', player.id]">
+  <div class="photo">
+    <img [src]="player.picture" alt="player" />
+  </div>
+  <div class="details">
+    <div class="title">{{ player.firstname }} {{ player.lastname }}</div>
+    <div class="stats">
+      <div class="stat">
+        <div class="subtitle">Rank</div>
+        <div class="text">#{{ player.data.rank }}</div>
+      </div>
+      <div class="stat">
+        <div class="subtitle">Points</div>
+        <div class="text">{{ player.data.points }}</div>
+      </div>
+      <div class="stat">
+        <div class="subtitle">Country</div>
+        <div class="text">{{ player.country.code }}</div>
+      </div>
+    </div>
+  </div>
+</a>

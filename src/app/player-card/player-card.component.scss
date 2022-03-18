@@ -1,0 +1,76 @@
+@import "../../styles/main.scss";
+
+.card {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 0 16px;
+  background: white;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: lighten($color: $main-color, $amount: 30);
+  }
+
+  .photo {
+    height: 150px;
+    width: 200px;
+    margin-right: 32px;
+    align-self: flex-end;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .details {
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .title {
+      font-family: $title-font;
+      color: $main-color;
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 40px;
+
+      .stat {
+        flex: 1;
+
+        .subtitle {
+          font-family: $text-font;
+          font-size: 12px;
+          letter-spacing: 1px;
+          color: $secondary-color;
+          text-transform: uppercase;
+        }
+
+        .text {
+          font-family: $text-font;
+          font-size: 12px;
+          font-weight: 800;
+          color: $main-color;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .card .photo img {
+    bottom: 0;
+    max-height: 100%;
+  }
+}

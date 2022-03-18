@@ -1,5 +1,67 @@
-@import '../../styles/main.scss';
+@import "../../styles/main.scss";
 
-p {
-    color: $main-color;
+.container {
+  max-width: $layout-breakpoint-extralarge;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 128px 24px 0;
+
+  .searchBox {
+    width: 100%;
+    max-width: 512px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    color: white;
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    opacity: 1;
+    transition: 0.2s ease-out;
+
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &::placeholder {
+      font-family: $title-font;
+      font-weight: 800;
+      opacity: 0.8;
+      color: $main-color;
+    }
+  }
+
+  .list {
+    max-width: 512px;
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .container {
+    max-width: $layout-breakpoint-small;
+    padding: 24px 8px 0 8px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .container {
+    max-width: $layout-breakpoint-small;
+  }
+}
+
+@media (max-width: $layout-breakpoint-large) {
+  .container {
+    max-width: $layout-breakpoint-medium;
+  }
+}
+
+@media (max-width: $layout-breakpoint-extralarge) {
+  .container {
+    max-width: $layout-breakpoint-large;
+  }
 }

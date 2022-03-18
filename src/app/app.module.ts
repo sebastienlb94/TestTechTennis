@@ -6,6 +6,8 @@ import { PlayerListComponent } from './player-list/player-list.component';
 import { PlayerDetailsComponent } from './player-details/player-details.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { PlayerFilterPipe } from './player-list/player-filter.pipe';
+
 
 const routes: Routes = [
   { path: "", component: PlayerListComponent},
@@ -17,12 +19,13 @@ const routes: Routes = [
     AppComponent,
     PlayerListComponent,
     PlayerDetailsComponent,
+    PlayerFilterPipe,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

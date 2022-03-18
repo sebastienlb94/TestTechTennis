@@ -1,1 +1,27 @@
 @import '../../styles/main.scss';
+
+.container {
+    width: 512px;
+
+    .searchBox {
+        width: 100%;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
+        color: white;
+        border-radius: 12px;
+        opacity: 1;
+        transition: .2s ease-out;
+
+        &:focus {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        &::placeholder {
+            font-family: $title-font;
+            font-weight: 800;
+            opacity: 0.8;
+            color: $main-color;
+        }
+    }
+}

@@ -6,7 +6,7 @@
   padding: 0 16px;
   background: white;
   transition: 0.3s;
-
+  margin-bottom: 16px;
   &:hover {
     background-color: lighten($color: $main-color, $amount: 30);
   }

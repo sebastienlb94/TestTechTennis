@@ -81,6 +81,7 @@
 
         .stat {
           min-width: 30%;
+          text-transform: uppercase;
 
           .subtitle {
             font-family: $text-font;
@@ -90,6 +91,9 @@
           .text {
             font-family: $title-font;
             color: $main-color;
+            margin-top: 8px;
+            font-weight: 800;
+            font-size: 14px;
           }
 
           &.col2 {
@@ -97,26 +101,30 @@
           }
         }
       }
-      .career-titles {
+      .career-titles-content {
         display: flex;
         flex-direction: column;
         gap: 16px;
+      }
+      .career-titles {
         font-family: $text-font;
         color: $secondary-color;
         flex: 1;
-
-        .career-rank {
-          font-family: $title-font;
-          color: $main-color;
-          .year {
-            font-weight: 800;
-          }
+        text-transform: uppercase;
+      }
+      .career-rank {
+        font-family: $title-font;
+        color: $main-color;
+        .year {
+          font-weight: 800;
         }
+      }
 
-        .career-description {
-          font-family: $title-font;
-          color: $main-color;
-        }
+      .career-description {
+        font-family: $title-font;
+        color: $main-color;
+        font-size: 12px;
+        margin-top: 10px;
       }
     }
   }

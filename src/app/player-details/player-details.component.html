@@ -1,1 +1,63 @@
-<p>player-details works!</p>
+<div class="details">
+  <a class="cross" [routerLink]="['/']">X</a>
+  <div class="container" *ngIf="player">
+    <div class="header">
+      <div class="name">
+        <div class="last-name title">{{ player.firstname }}</div>
+        <div class="first-name title">{{ player.lastname }}</div>
+      </div>
+      <div class="country">
+        <div class="flag">
+          <img [src]="player.country.picture" />
+        </div>
+        <div class="code subtitle">{{ player.country.code }}</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="stats">
+        <div class="stat">
+          <div class="subtitle">Rank</div>
+          <div class="text">{{ player.data.rank }}</div>
+        </div>
+        <div class="stat">
+          <div class="subtitle">Points</div>
+          <div class="text">#{{ player.data.points }}</div>
+        </div>
+        <div class="stat">
+          <div class="subtitle">Country</div>
+          <div class="text">{{ player.country.code }}</div>
+        </div>
+        <div class="stat">
+          <div class="subtitle">Birthday</div>
+          <div class="text">22/05/1987</div>
+        </div>
+        <div class="stat col2">
+          <div class="subtitle">Age</div>
+          <div class="text">{{ player.data.age }}</div>
+        </div>
+        <div class="stat">
+          <div class="subtitle">Weight</div>
+          <div class="text">{{ player.data.weight / 1000 }} kg</div>
+        </div>
+        <div class="stat">
+          <div class="subtitle">Height</div>
+          <div class="text">{{ player.data.height }} cm</div>
+        </div>
+      </div>
+      <div class="career-titles">
+        <div class="subtitle">Career titles</div>
+        <div class="career-title" *ngFor="let title of player.titles">
+          <div class="career-rank text">
+            <span class="year">{{ title.year }}</span> - {{ title.rank }}
+          </div>
+          <div class="career-description text">
+            <div *ngFor="let competition of title.competitions">
+              {{ competition }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="player-image" *ngIf="player" [src]="player.picture" />
+</div>

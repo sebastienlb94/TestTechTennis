@@ -1,4 +1,4 @@
-# TestTennis
+# Test Technique L’Atelier - Front-End
 
 Dans le cadre du test technique proposé par l'Atelier j'ai créé un site qui affiche les statistiques des joueurs de tennis. 
 
